@@ -7,10 +7,10 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        
+    <?php include "header.php"; ?>    
         <div id="wrapper">
             <?php
-            include "header.php";
+            
             /**
              * Cette page est TRES similaire à wall.php. 
              * Vous avez sensiblement à y faire la meme chose.
@@ -47,6 +47,9 @@
             </aside>
             <main>
                 <?php
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
                 /**
                  * Etape 3: récupérer tous les messages des abonnements
                  */
