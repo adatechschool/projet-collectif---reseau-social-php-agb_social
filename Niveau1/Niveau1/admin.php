@@ -39,7 +39,7 @@
                     ?>
                     <article>
                         <h3>#chaussette</h3>
-                        <p>id:321</p>
+                        <p><?php echo $tag['label'] ?></p>
                         <nav>
                             <a href="tags.php?tag_id=321">Messages</a>
                         </nav>
