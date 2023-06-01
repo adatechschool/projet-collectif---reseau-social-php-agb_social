@@ -56,7 +56,7 @@
                 {
                     echo("Échec de la requete : " . $mysqli->error);
                 }
-                $user = $lesInformations->fetch_assoc();
+                while ($user = $lesInformations->fetch_assoc()) {
 
                 /**
                  * Etape 4: à vous de jouer
@@ -80,6 +80,9 @@
                     </dl>
 
                 </article>
+                <?php 
+            }
+                ?>
             </main>
         </div>
     </body>
