@@ -70,10 +70,9 @@
                     }
                     ?>                     
                     <form action="registration.php" method="post">
-                        <input type='hidden'name='???' value='achanger'>
                         <dl>
-                            <dt><label for='pseudo'>Pseudo</label></dt>
-                            <dd><input type='text'name='pseudo'></dd>
+                            <dt><label for='alias'>Pseudo</label></dt>
+                            <dd><input type='text' name='alias'></dd>
                             <dt><label for='email'>E-Mail</label></dt>
                             <dd><input type='email'name='email'></dd>
                             <dt><label for='motpasse'>Mot de passe</label></dt>
