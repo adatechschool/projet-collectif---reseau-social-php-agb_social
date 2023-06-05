@@ -37,8 +37,8 @@ session_start();
                         // observez le résultat de cette ligne de débug (vous l'effacerez ensuite)
                         echo "<pre>" . print_r($_POST, 1) . "</pre>";
                         // et complétez le code ci dessous en remplaçant les ???
-                        $emailAVerifier = $_POST['???'];
-                        $passwdAVerifier = $_POST['???'];
+                        $emailAVerifier = $_POST['email'];
+                        $passwdAVerifier = $_POST['password'];
 
 
                         //Etape 3 : Ouvrir une connexion avec la base de donnée.
@@ -54,7 +54,7 @@ session_start();
                         $lInstructionSql = "SELECT * "
                                 . "FROM users "
                                 . "WHERE "
-                                . "email LIKE '" . $emailAVerifier . "'"
+                                . "email LIKE '" . $emailAVerifier . "'" && "password LIKE '" . $passwdAVerifier . "'"
                                 ;
                         // Etape 6: Vérification de l'utilisateur
                         $res = $mysqli->query($lInstructionSql);
@@ -77,8 +77,8 @@ session_start();
                         <dl>
                             <dt><label for='email'>E-Mail</label></dt>
                             <dd><input type='email'name='email'></dd>
-                            <dt><label for='motpasse'>Mot de passe</label></dt>
-                            <dd><input type='password'name='motpasse'></dd>
+                            <dt><label for='password'>Mot de passe</label></dt>
+                            <dd><input type='password'name='password'></dd>
                         </dl>
                         <input type='submit'>
                     </form>
