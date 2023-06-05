@@ -47,13 +47,13 @@ session_start();
                      */
                     // Etape 1 : vérifier si on est en train d'afficher ou de traiter le formulaire
                     // si on recoit un champs email rempli il y a une chance que ce soit un traitement
-                    $enCoursDeTraitement = isset($_POST['auteur']);
+                    $enCoursDeTraitement = isset($_POST['content']);
                     if ($enCoursDeTraitement)
                     {
                         // on ne fait ce qui suit que si un formulaire a été soumis.
                         // Etape 2: récupérer ce qu'il y a dans le formulaire @todo: c'est là que votre travaille se situe
                         // observez le résultat de cette ligne de débug (vous l'effacerez ensuite)
-                        echo "<pre>" . print_r($_POST, 1) . "</pre>";
+                        // echo "<pre>" . print_r($_POST, 1) . "</pre>";
                         // et complétez le code ci dessous en remplaçant les ???
                         $authorId = $_POST['user_id'];
                         $postContent = $_POST['content'];
@@ -69,9 +69,9 @@ session_start();
                                 . "VALUES (NULL, "
                                 . $authorId . ", "
                                 . "'" . $postContent . "', "
-                                . "NOW());";
-                             
-                        echo $lInstructionSql;
+                                . "NOW());"
+                                ;
+    
                         // Etape 5 : execution
                         $ok = $mysqli->query($lInstructionSql);
                         if ( ! $ok)
@@ -79,21 +79,21 @@ session_start();
                             echo "Impossible d'ajouter le message: " . $mysqli->error;
                         } else
                         {
-                            echo "Message posté en tant que :" . $listAuteurs[$authorId];
+                            echo "Message posté en tant que : " . $listAuteurs[$authorId];
                         }
                     }
                     ?>                     
                     <form action="usurpedpost.php" method="post">
-                        <input type='hidden' name='' value='achanger'>
+                        <input type='hidden' name='???' value='achanger'>
                         <dl>
-                            <dt><label for='user_id'>Auteur</label></dt>
+                            <dt><label for='auteur'>Auteur</label></dt>
                             <dd><select name='user_id'>
                                     <?php
                                     foreach ($listAuteurs as $id => $alias)
                                         echo "<option value='$id'>$alias</option>";
                                     ?>
                                 </select></dd>
-                            <dt><label for='content'>Message</label></dt>
+                            <dt><label for='message'>Message</label></dt>
                             <dd><textarea name='content'></textarea></dd>
                         </dl>
                         <input type='submit'>
