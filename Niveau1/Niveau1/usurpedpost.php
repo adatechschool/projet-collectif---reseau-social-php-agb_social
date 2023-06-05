@@ -55,8 +55,8 @@ session_start();
                         // observez le résultat de cette ligne de débug (vous l'effacerez ensuite)
                         echo "<pre>" . print_r($_POST, 1) . "</pre>";
                         // et complétez le code ci dessous en remplaçant les ???
-                        $authorId = $_POST['???'];
-                        $postContent = $_POST['???'];
+                        $authorId = $_POST['user_id'];
+                        $postContent = $_POST['content'];
 
 
                         //Etape 3 : Petite sécurité
@@ -65,14 +65,12 @@ session_start();
                         $postContent = $mysqli->real_escape_string($postContent);
                         //Etape 4 : construction de la requete
                         $lInstructionSql = "INSERT INTO posts "
-                                . "(id, user_id, content, created, permalink, post_id) "
+                                . "(id, user_id, content, created) "
                                 . "VALUES (NULL, "
                                 . $authorId . ", "
                                 . "'" . $postContent . "', "
-                                . "NOW(), "
-                                . "'', "
-                                . "NULL);"
-                                ;
+                                . "NOW());";
+                             
                         echo $lInstructionSql;
                         // Etape 5 : execution
                         $ok = $mysqli->query($lInstructionSql);
@@ -86,17 +84,17 @@ session_start();
                     }
                     ?>                     
                     <form action="usurpedpost.php" method="post">
-                        <input type='hidden' name='???' value='achanger'>
+                        <input type='hidden' name='' value='achanger'>
                         <dl>
-                            <dt><label for='auteur'>Auteur</label></dt>
-                            <dd><select name='auteur'>
+                            <dt><label for='user_id'>Auteur</label></dt>
+                            <dd><select name='user_id'>
                                     <?php
                                     foreach ($listAuteurs as $id => $alias)
                                         echo "<option value='$id'>$alias</option>";
                                     ?>
                                 </select></dd>
-                            <dt><label for='message'>Message</label></dt>
-                            <dd><textarea name='message'></textarea></dd>
+                            <dt><label for='content'>Message</label></dt>
+                            <dd><textarea name='content'></textarea></dd>
                         </dl>
                         <input type='submit'>
                     </form>               
