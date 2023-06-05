@@ -11,6 +11,8 @@ session_start();
         <header>
             <img src="resoc.jpg" alt="Logo de notre réseau social"/>
             <nav id="menu">
+                <a href="login.php">Log</a>
+                <a href="registration.php">Enregistrement</a>
                 <a href="news.php">Actualités</a>
                 <a href="wall.php?user_id=<?php echo $_SESSION['connected_id']?>">Mur</a>
                 <a href="feed.php?user_id=<?php echo $_SESSION['connected_id']?>">Flux</a>
@@ -23,6 +25,7 @@ session_start();
                     <li><a href="followers.php?user_id=<?php echo $_SESSION['connected_id']?>">Mes suiveurs</a></li>
                     <li><a href="subscriptions.php?user_id=<?php echo $_SESSION['connected_id']?>">Mes abonnements</a></li>
                 </ul>
+    
 
             </nav>
         </header>
