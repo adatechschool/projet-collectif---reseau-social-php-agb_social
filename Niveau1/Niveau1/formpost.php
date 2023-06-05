@@ -18,7 +18,6 @@ include 'header.php';
                   ini_set('display_errors', 1);
                   ini_set('display_startup_errors', 1);
                   error_reporting(E_ALL);
-                  echo "{$_SESSION['connected_id']}";
                 $enCoursDeTraitement = isset($_POST['content']);
                 if ($enCoursDeTraitement) {
                     echo "<pre>" . print_r($_POST, 1) . "</pre>";
