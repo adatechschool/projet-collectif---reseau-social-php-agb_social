@@ -46,20 +46,12 @@ include 'header.php';
 
                 $ok = $mysqli->query($lInstructionSql);
                 if (!$ok) {
-                    echo "L'inscription a échouée : " . $mysqli->error;
+                    echo "Votre message n'a pas pu etre envoyé : " . $mysqli->error;
                 } else {
-                    echo "Votre inscription est un succès : " . $new_alias;
-                    echo " <a href='login.php'>Connectez-vous.</a>";
+                    echo "Votre message à été envoyé : " . $new_posts;
+                   
                 }
-                /**
-                 * Récupération de la liste des auteurs
-                 */
-                $listAuteurs = [];
-                $laQuestionEnSql = "SELECT * FROM users";
-                $lesInformations = $mysqli->query($laQuestionEnSql);
-                while ($user = $lesInformations->fetch_assoc()) {
-                    $listAuteurs[$user['id']] = $user['alias'];
-                }
+                
                 ?>
                 <input type='submit'>
             </form>
