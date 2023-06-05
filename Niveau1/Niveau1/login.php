@@ -54,14 +54,15 @@ session_start();
                         $lInstructionSql = "SELECT * "
                                 . "FROM users "
                                 . "WHERE "
-                                . "email LIKE '" . $emailAVerifier . "'" && "password LIKE '" . $passwdAVerifier . "'"
+                                . "email LIKE '" . $emailAVerifier . "'"
                                 ;
                         // Etape 6: Vérification de l'utilisateur
                         $res = $mysqli->query($lInstructionSql);
+
                         $user = $res->fetch_assoc();
                         if ( ! $user OR $user["password"] != $passwdAVerifier)
                         {
-                            echo "La connexion a échouée. ";
+                            echo "La connexion a échouée.";
                             
                         } else
                         {
@@ -70,6 +71,7 @@ session_start();
                             // documentation: https://www.php.net/manual/fr/session.examples.basic.php
                             $_SESSION['connected_id']=$user['id'];
                         }
+                        
                     }
                     ?>                     
                     <form action="login.php" method="post">
