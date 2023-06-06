@@ -1,15 +1,5 @@
-<?php
-include 'header.php';
-?>
-
-
-
 <div id="wrapper">
 
-    <aside>
-        <h2>Présentation</h2>
-        <p>Sur cette page on peut poster un message en étant enregistré.</p>
-    </aside>
     <main>
         <article>
             <h2>Poster un message</h2>
