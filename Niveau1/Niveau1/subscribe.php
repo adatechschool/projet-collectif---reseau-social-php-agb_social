@@ -16,14 +16,14 @@
                 // Etape 5 : construction de la requete
                 $lInstructionSql = "INSERT INTO followers (id, followed_user_id, following_user_id)"
                     . "VALUES (NULL, "
-                    . "'" . $_SESSION['connected_id'] . "', "
-                    . "'" . $userId2 . "'); "
+                    . "'" . $userId2 . "', "
+                    . "'" . $_SESSION['connected_id']. "'); "
                     ;
 
                 $ok = $mysqli->query($lInstructionSql);
                 
                 if (!$ok) {
-                    echo "Votre requete n'a pas abouti : " . $mysqli->error;
+                    echo "Votre requête n'a pas abouti : " . $mysqli->error;
                 } else {
                     echo "Vous venez de follow  : " . $userId2;
                    
