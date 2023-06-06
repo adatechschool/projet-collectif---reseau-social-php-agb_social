@@ -21,6 +21,7 @@
              */
             $userId = intval($_GET['user_id']);
             include "mySql.php";
+            include "erreur.php";
             ?>
             
 
@@ -41,13 +42,7 @@
                     <p>Sur cette page vous trouverez tous les message des utilisatrices
                         auxquel est abonnée l'utilisatrice <?php echo $user['alias'] ?>
                         (n° <?php echo $userId; 
-                         
-                         if (!isset($_SESSION["connected_id"])){
-                            header('Location: notLoggedIn.php');
-                         }
-                         else {
-                             echo "Vous êtes connecté.e";
-                         }
+                
                       ?>)
                     </p>
 

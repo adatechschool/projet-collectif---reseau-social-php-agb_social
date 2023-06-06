@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-       <?php include "header.php"; ?>
+       <?php include "header.php";
+       include "erreur.php";
+       ?>
         <div id="wrapper">          
             <aside>
                 <img src = "user.jpg" alt = "Portrait de l'utilisatrice"/>
@@ -42,7 +44,7 @@
                 ?>
                 <article>
                     <img src="user.jpg" alt="blason"/>
-                    <h3><a href="wall.php?user_id="<?php echo $follower['id'] ?>><?php echo $follower['alias'] ?></a></h3>
+                    <h3><a href="wall.php?user_id=<?php echo $follower['id'] ?>"><?php echo $follower['alias'] ?></a></h3>
                     <p>id<?php echo $follower['id'] ?></p>
                 </article>
                 <?php

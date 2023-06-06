@@ -35,6 +35,7 @@
                  * Etape 2: se connecter à la base de donnée
                  */
                 include "mySql.php";
+                include "erreur.php";
 
                 /**
                  * Etape 3: récupérer le nom de l'utilisateur
