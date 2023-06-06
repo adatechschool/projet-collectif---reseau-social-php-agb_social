@@ -91,6 +91,8 @@
                     </article>
                 <?php } 
                 include "formpost.php";
+                include "subscribe.php";
+                echo "TESTTT";
                 ?>
                 
 
