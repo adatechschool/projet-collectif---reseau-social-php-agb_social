@@ -66,6 +66,7 @@
                         {
                             echo "Votre inscription est un succès : " . $new_alias;
                             echo " <a href='login.php'>Connectez-vous.</a>";
+                            echo "newpassword:{$new_passwd}";
                         }
                     }
                     ?>                     
@@ -76,7 +77,7 @@
                             <dt><label for='email'>E-Mail</label></dt>
                             <dd><input type='email'name='email'></dd>
                             <dt><label for='motpasse'>Mot de passe</label></dt>
-                            <dd><input type='password'name='motpasse'></dd>
+                            <dd><input type='password'name='password'></dd>
                         </dl>
                         <input type='submit'>
                     </form>

@@ -59,7 +59,10 @@
                         $user = $res->fetch_assoc();
                         if ( ! $user OR $user["password"] != $passwdAVerifier)
                         {
-                            echo "La connexion a échouée.";
+                            ini_set('display_errors', 1);
+                            ini_set('display_startup_errors', 1);
+                            error_reporting(E_ALL);
+                            echo "La connexion a échouée. user: {$user}, userpwd: {$user["password"]}, pwdaverifier: {$passwdAVerifier}";
                             
                         } else
                         {
