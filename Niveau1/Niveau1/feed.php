@@ -82,7 +82,14 @@
                  * A vous de retrouver comment faire la boucle while de parcours...
                  */
                 ?>     
-
+                    <?php
+                        if (isset($_SESSION["connected_id"])){
+                            echo "vous etes connectez";
+                        }
+                        else{
+                            echo "vous n avez pas connectez";
+                        }
+                     ?>
                 <article>
                     <h3>
                         <time datetime='2020-02-01 11:12:13' ><?php echo $post['created'] ?></time>
