@@ -1,3 +1,5 @@
+<?php include "session_start.php" ?>
+
 <div id="wrapper">
 
     <main>
