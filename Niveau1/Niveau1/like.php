@@ -18,14 +18,14 @@
                     $post = $PostsInformations->fetch_assoc();
                     echo "Hello";
                     echo "<pre>" . print_r($post) . "</pre>";
-                    $postId=$post['post_id'];
+                    $postId=$post['id'];
                     echo "{$postId}";
                 }
                 // Etape 5 : construction de la requete
                 $lInstructionSql = "INSERT INTO likes (id, user_id, post_id)"
                     . "VALUES (NULL, "
                     . "'" . $_SESSION['connected_id'] . "', "
-                    . "'" . $postId . "'); "
+                    . "'" . intval($postId) . "'); "
                     ;
 
                 $ok = $mysqli->query($lInstructionSql);
