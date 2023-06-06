@@ -21,11 +21,18 @@ include "session_start.php";
             <nav id="user">
                 <a href="#">Profil</a>
                 <ul>
+                    <?php if(!isset($_SESSION['connected_id'])) {?>
+                    <li><a href="login.php">Login</a></li>
+
+                    <?php } else {?>
+
                     <li><a href="settings.php?user_id=<?php echo $_SESSION['connected_id']?>">Paramètres</a></li>
                     <li><a href="followers.php?user_id=<?php echo $_SESSION['connected_id']?>">Mes suiveurs</a></li>
                     <li><a href="subscriptions.php?user_id=<?php echo $_SESSION['connected_id']?>">Mes abonnements</a></li>
+                    
+                    <?php } ?>
                 </ul>
-    
+                        
 
             </nav>
         </header>
