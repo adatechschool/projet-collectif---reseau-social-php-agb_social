@@ -66,7 +66,6 @@
                         {
                             echo "Votre inscription est un succès : " . $new_alias;
                             echo " <a href='login.php'>Connectez-vous.</a>";
-                            echo "newpassword:{$new_passwd}";
                         }
                     }
                     ?>                     
