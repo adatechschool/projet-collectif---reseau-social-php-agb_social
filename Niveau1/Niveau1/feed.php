@@ -40,7 +40,15 @@
                     <h3>Presentation<?php echo $user['alias'] ?></h3>
                     <p>Sur cette page vous trouverez tous les message des utilisatrices
                         auxquel est abonnée l'utilisatrice <?php echo $user['alias'] ?>
-                        (n° <?php echo $userId ?>)
+                        (n° <?php echo $userId; 
+                         
+                         if (!isset($_SESSION["connected_id"])){
+                            header('Location: notLoggedIn.php');
+                         }
+                         else {
+                             echo "Vous êtes connecté.e";
+                         }
+                      ?>)
                     </p>
 
                 </section>
@@ -82,14 +90,7 @@
                  * A vous de retrouver comment faire la boucle while de parcours...
                  */
                 ?>     
-                    <?php
-                        if (isset($_SESSION["connected_id"])){
-                            echo "vous etes connectez";
-                        }
-                        else{
-                            echo "vous n avez pas connectez";
-                        }
-                     ?>
+                   
                 <article>
                     <h3>
                         <time datetime='2020-02-01 11:12:13' ><?php echo $post['created'] ?></time>
