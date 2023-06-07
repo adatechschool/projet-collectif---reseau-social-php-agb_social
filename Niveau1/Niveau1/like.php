@@ -8,7 +8,6 @@
                 $enCoursDeTraitement = isset($_POST['like_php']);
                 $userId2 = intval($_GET['user_id']);
                 if ($enCoursDeTraitement) {
-                    echo "<pre>" . print_r($_POST, 1) . "</pre>";
                 include "mySql.php";
                 $instructionSqlPosts = "SELECT posts.id FROM posts JOIN likes ON posts.id = likes.post_id;";
                 $PostsInformations = $mysqli->query($instructionSqlPosts);
@@ -16,10 +15,7 @@
                     echo "La requête n'a pas fonctionné";
                 } else {
                     $post = $PostsInformations->fetch_assoc();
-                    echo "Hello";
-                    echo "<pre>" . print_r($post) . "</pre>";
                     $postId=$post['id'];
-                    echo "{$postId}";
                 }
                 // Etape 5 : construction de la requete
                 $lInstructionSql = "INSERT INTO likes (id, user_id, post_id)"

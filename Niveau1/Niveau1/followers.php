@@ -38,7 +38,7 @@
                 $lesInformations = $mysqli->query($laQuestionEnSql);
                 // Etape 4: à vous de jouer
                 while ($follower = $lesInformations->fetch_assoc()){
-                    echo "<pre>" .print_r($follower,1)."</pre>";
+
                 
                 //@todo: faire la boucle while de parcours des abonnés et mettre les bonnes valeurs ci dessous 
                 ?>
