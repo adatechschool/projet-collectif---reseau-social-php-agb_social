@@ -1,6 +1,8 @@
 <?php 
 include "session_start.php";
 ?>
+<!doctype html>
+<html lang="fr">
 <head>
         <meta charset="utf-8">
         <title>ReSoC - Administration</title> 
