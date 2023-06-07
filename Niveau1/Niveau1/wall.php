@@ -76,7 +76,7 @@
                             <p><?php echo $post['content']?></p>
                         </div>                                            
                         <footer>
-                            <small>♥ <?php echo $post['like_number']; include "like.php"; ?>
+                            <small><?php include "like.php";?> ♥ <?php echo $post['like_number'];  ?>
                             </small>
                             <a href=""><?php echo $post['taglist']?></a>
                         </footer>

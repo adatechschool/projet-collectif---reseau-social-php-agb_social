@@ -119,7 +119,7 @@ body>header #user:hover ul{
     text-align: right;
 }
 #wrapper main article footer small{
-    float:left;
+    float:none;
 }
 
 #wrapper.admin{flex-direction: row-reverse}
@@ -132,7 +132,7 @@ body>header #user:hover ul{
 #wrapper.admin article p{float:left;margin:0;}
 
 #wrapper input[type="submit"]{
-    flex: auto;
+    position: relative;
 }
 
 .parameters dl dt{float:left;font-weight: bold;line-height: 1.5em;}
