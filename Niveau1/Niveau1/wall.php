@@ -70,20 +70,20 @@
                         <h3>
                             <time datetime=<?php echo $post['created']?> ><?php echo $post['created']?></time>
                         </h3>
-                        <address>par <?php echo $post['author_name']?></address>
+                        <address>par <?php echo $post['author_name']; include "subscribe.php";?></address>
                         <div>
                             
                             <p><?php echo $post['content']?></p>
                         </div>                                            
                         <footer>
-                            <small>♥ <?php echo $post['like_number'];
-                            include "like.php"; ?> </small>
+                            <small>♥ <?php echo $post['like_number']; include "like.php"; ?>
+                            </small>
                             <a href=""><?php echo $post['taglist']?></a>
                         </footer>
                     </article>
                 <?php } 
                 include "formpost.php";
-                include "subscribe.php";
+                
                 ?>
                 
 

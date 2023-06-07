@@ -1,9 +1,6 @@
 <?php include "session_start.php" ?>
 
-<div id="wrapper">
 
-    <main>
-        <article>
             <h2>Poster un message</h2>
             
                 <?php
@@ -42,9 +39,7 @@
                     </dl>
                     <input type='submit'>
             </form>
-        </article>
-    </main>
-</div>
+
 </body>
 
 </html>

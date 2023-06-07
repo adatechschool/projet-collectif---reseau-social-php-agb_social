@@ -1,6 +1,4 @@
-<div id="wrapper">
-    <main>
-        <article>
+
             <?php
                   ini_set('display_errors', 1);
                   ini_set('display_startup_errors', 1);
@@ -37,9 +35,8 @@
                     <form action="wall.php?user_id=<?php echo $userId2 ?>" method="post">
                     <input type="submit" value="Like" name="like_php"> 
             </form>
-        </article>
-    </main>
-</div>
+
+
 </body>
 
 </html>

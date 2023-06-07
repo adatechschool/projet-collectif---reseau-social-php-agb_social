@@ -6,7 +6,7 @@ session_start();
         ?>
 
 
-        <div id="wrapper" >
+        <div id="form" >
 
             <aside>
                 <h2>Présentation</h2>
